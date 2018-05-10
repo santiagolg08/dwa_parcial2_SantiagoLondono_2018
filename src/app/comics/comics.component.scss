@@ -6,7 +6,7 @@
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     width: 100%;
-    background-color: 5%;
+    background-color: #ddd;
     @include medium {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -24,7 +24,7 @@
     }
     .infoComic{
         width: 100%;
-        height: 20%;
+        height: 15%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -47,28 +47,3 @@
         }
     }
 }
-
-
-/* .contComics{
-    width:100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    .itemComic{
-        width: 15%;
-        margin: 1%;
-        background-color: #ddd;    
-        .imgComic{
-            width: 100%;
-            height: 50%;
-        }
-        .infoComic{
-            padding: 0 5% 0 5%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
-} */

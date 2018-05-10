@@ -1,9 +1,12 @@
+<header>
+    <input type="text" [(ngModel)]="filterText">
+</header>
 <section>
   <ul class="comicGrid">
-    <li *ngFor="let comic of listaComics; let i = index;" class="comicElement">
+    <li *ngFor="let comic of listaComics | filter:filterText; let i = index;" class="comicElement">
         <img src="{{comic.thumbnail.path}}.jpg" alt="" class="comicImg">
         <div class="infoComic">
-          <h3 class="nombreComic">{{comic.title}}</h3>
+          <h4 class="nombreComic">{{comic.title}}</h4>
           <div class="votosComic">
             <h4>{{likeComics[i]}}</h4>
             <button (click)="gestionarLike(i, true)">
@@ -17,21 +20,3 @@
     </li>
   </ul>
 </section>
-
-<!-- <div class="contComics">
-  <div class="itemComic" *ngFor="let comic of listaComics;">
-    <img src="{{comic.thumbnail.path}}.jpg" class="imgComic">
-    <div class="infoComic">
-      <h3 class="nombreComic">{{comic.title}}</h3>
-      <div class="votosComic">
-        <h4 class="contLikes">0</h4>
-        <button>
-          <img src="../../assets/img/arrow-up.png">
-        </button>
-        <button>
-          <img src="../../assets/img/arrow-down.png">
-        </button>
-      </div>
-    </div>
-  </div>
-</div> -->
