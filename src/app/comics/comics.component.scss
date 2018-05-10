@@ -1,0 +1,13 @@
+.contComics{
+    width:100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    .itemComic{
+        width: 21%;
+        .imgComic{
+            width: 100%;
+        }
+    }
+
+}

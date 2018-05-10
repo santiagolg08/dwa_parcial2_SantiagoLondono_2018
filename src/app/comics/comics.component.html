@@ -1,18 +1,18 @@
 <div class="contComics">
   <div class="itemComic" *ngFor="let comic of listaComics;">
-    <div class="imgComic">
-      <img src="{{comic.thumbnail.path}}.jpg">
-    </div>
-    <div class="infoComic">
-      <div class="nombreComic">
-
-      </div>
-      <div class="fechaComic">
-
-      </div>
+    <img src="{{comic.thumbnail.path}}.jpg" class="imgComic">
+    <!--<div class="infoComic">
+        <h1 class="nombreComic"></h1>
+        <h1 class="fechaComic"></h1>
+        <p class="contLikes">0</p>
       <div class="votosComic">
-
+        <button>
+          <img src="../../assets/img/arrow-up.png">
+        </button>
+        <button>
+          <img src="../../assets/img/arrow-down.png">
+        </button>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
