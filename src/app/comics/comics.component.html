@@ -1,11 +1,30 @@
-<div class="contComics">
+<section>
+  <ul class="comicGrid">
+    <li *ngFor="let comic of listaComics; let i = index;" class="comicElement">
+        <img src="{{comic.thumbnail.path}}.jpg" alt="" class="comicImg">
+        <div class="infoComic">
+          <h3 class="nombreComic">{{comic.title}}</h3>
+          <div class="votosComic">
+            <h4>{{likeComics[i]}}</h4>
+            <button (click)="gestionarLike(i, true)">
+              <img src="../../assets/img/arrow-up.png">
+            </button>
+            <button (click)="gestionarLike(i, false)">
+              <img src="../../assets/img/arrow-down.png">
+            </button>
+          </div>
+        </div>
+    </li>
+  </ul>
+</section>
+
+<!-- <div class="contComics">
   <div class="itemComic" *ngFor="let comic of listaComics;">
     <img src="{{comic.thumbnail.path}}.jpg" class="imgComic">
-    <!--<div class="infoComic">
-        <h1 class="nombreComic"></h1>
-        <h1 class="fechaComic"></h1>
-        <p class="contLikes">0</p>
+    <div class="infoComic">
+      <h3 class="nombreComic">{{comic.title}}</h3>
       <div class="votosComic">
+        <h4 class="contLikes">0</h4>
         <button>
           <img src="../../assets/img/arrow-up.png">
         </button>
@@ -13,6 +32,6 @@
           <img src="../../assets/img/arrow-down.png">
         </button>
       </div>
-    </div> -->
+    </div>
   </div>
-</div>
+</div> -->
