@@ -1,6 +1,44 @@
 @import '../../assets/scss/variables.scss';
 @import '../../assets/scss/responsive.scss';
 
+
+header.headerCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1%;
+    background: -moz-linear-gradient(45deg, #f70303 0%, black 100%);
+    background: -webkit-linear-gradient(45deg, #f70303 0%, black 100%);
+    background: linear-gradient(45deg, #f70303 0%, black 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#009ec3',GradientType=1 );
+    img{
+        width:15%;
+        margin-bottom: 2%;
+    }
+    .barraBusqueda{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        input{
+            width: 50%;
+            margin-left: 5%;
+        }
+        img{
+            width: 5%;
+            @include medium {
+                width: 7%;
+            }
+            @include small {
+                width: 7%;
+            }
+        }
+    }
+}
+
+
 .comicGrid {
     display: grid;
     grid-template-columns: 1fr;
@@ -31,9 +69,20 @@
         align-items: center;
         .votosComic{
             text-align: center;
+            @include small {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            @include large {
+                display: unset;
+                flex-direction: unset;
+            }
             button{
                 background-color: transparent;
                 border: 0;
+                img{
+                    width: 70%;
+                }
             }
             button:hover{
                 cursor: pointer;

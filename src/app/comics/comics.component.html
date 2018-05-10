@@ -1,12 +1,16 @@
-<header>
-    <input type="text" [(ngModel)]="filterText">
+<header class="headerCont">
+    <img src="../../assets/img/marvel.png">
+    <div class="barraBusqueda">
+        <input type="text" placeholder="Ingrese Nombre" [(ngModel)]="filterText">
+        <img src="../../assets/img/search.png">
+    </div>
 </header>
 <section>
   <ul class="comicGrid">
     <li *ngFor="let comic of listaComics | filter:filterText; let i = index;" class="comicElement">
         <img src="{{comic.thumbnail.path}}.jpg" alt="" class="comicImg">
         <div class="infoComic">
-          <h4 class="nombreComic">{{comic.title}}</h4>
+          <h4 class="nombreComic">{{comic.title}} - {{comic.dates[0].date}}</h4>
           <div class="votosComic">
             <h4>{{likeComics[i]}}</h4>
             <button (click)="gestionarLike(i, true)">
